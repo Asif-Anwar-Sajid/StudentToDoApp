@@ -1,0 +1,24 @@
+# Ignore build artifacts
+bin/
+obj/
+
+# Ignore Visual Studio and VS Code settings
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore node_modules for Angular
+frontend/node_modules/
+
+# Ignore sensitive environment files
+*.env
+
+# Logs and database files
+*.log
+*.db
+
+# Ignore backup and temporary files
+*.bak
+*.tmp
