@@ -1,6 +1,48 @@
+### Base API URL
 @StudentToDoApi_HostAddress = http://localhost:5219
 
-GET {{StudentToDoApi_HostAddress}}/weatherforecast/
-Accept: application/json
+### 1. Register a New Student
+POST {{StudentToDoApi_HostAddress}}/api/Student/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "passwordHash": "password123"
+}
 
 ###
+
+### 2. Login a Student
+POST {{StudentToDoApi_HostAddress}}/api/Student/login
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "passwordHash": "password123"
+}
+
+###
+
+### 3. Create a ToDo Task
+POST {{StudentToDoApi_HostAddress}}/api/ToDo
+Content-Type: application/json
+
+{
+  "studentId": "PLACE_STUDENT_ID_HERE",
+  "task": "Complete the backend project"
+}
+
+###
+
+### 4. Get All ToDo Tasks for a Student
+GET {{StudentToDoApi_HostAddress}}/api/ToDo/PLACE_STUDENT_ID_HERE
+
+###
+
+### 5. Mark a ToDo Task as Completed
+PUT {{StudentToDoApi_HostAddress}}/api/ToDo/PLACE_TASK_ID_HERE
+
+###
+
+### 6. Delete a ToDo Task
+DELETE {{StudentToDoApi_HostAddress}}/api/ToDo/PLACE_TASK_ID_HERE

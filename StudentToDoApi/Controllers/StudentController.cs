@@ -16,7 +16,7 @@ namespace StudentToDoApi.Controllers
             _studentService = studentService;
         }
 
-        // POST: api/Student/register
+        // POST: api/Student/registerS
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] Student student)
         {
