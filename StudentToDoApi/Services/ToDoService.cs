@@ -17,6 +17,11 @@ namespace StudentToDoApi.Services
         // Create a new task
         public async Task<ToDo> CreateTaskAsync(string studentId, string task)
         {
+            if (string.IsNullOrEmpty(studentId) || string.IsNullOrEmpty(task))
+            {
+                throw new ArgumentException("StudentId and Task are required.");
+            }
+
             var newTask = new ToDo
             {
                 StudentId = studentId,
